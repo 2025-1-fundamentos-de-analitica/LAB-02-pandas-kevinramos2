@@ -26,7 +26,7 @@ def pregunta_09():
 
     df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
 
-    df.loc[35, "c3"] = "1999-02-28"  # fecha válida similar a la original
+    df.loc[35, "c3"] = "1999-02-28" 
     # Convertir a datetime y extraer año
     df["year"] = pd.to_datetime(df["c3"]).dt.year.astype(str)
     return df
